@@ -1,0 +1,83 @@
+@use "./abstracts" as *;
+
+
+.navbutton {
+    background-color: $primary-blue;
+    height: 50px;
+    position: fixed;
+    z-index: 1;
+    right: 0;
+
+    &__toggle {
+        cursor: pointer;
+        padding: 15px;
+        float: right;
+        color: $white;
+        font-size: 20px;
+        position: relative;
+        z-index: 1;
+
+        &__bar {
+            width: 25px;
+            height: 3px;
+            background-color: $white;
+            margin-bottom: 4px;
+            transition: transform 0.3s ease;
+        }
+    }
+    &__menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $secondary_blue;
+
+        &.menu {
+            display: block;
+
+            & ul {
+                list-style-type: none;
+                font-family: "Work Sans", sans-serif;
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                font-size: 3rem;
+                font-weight: 700;
+                letter-spacing: 0.125rem;
+
+                & li {
+                    margin: 10px;
+
+                    a {
+                        color: $white;
+                        margin-left: 40px;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+
+    &__yellow::before {
+        content: "";
+        height: 0.6rem;
+        width: 90px;
+        display: inline-block;
+        margin: 0px 0px 22px -90px;
+        background-color: $yellow;
+    }
+}
+
+.navbutton__toggle.open .navbutton__toggle__bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.navbutton__toggle.open .navbutton__toggle__bar:nth-child(2) {
+    opacity: 0;
+}
+
+.navbutton__toggle.open .navbutton__toggle__bar:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+}

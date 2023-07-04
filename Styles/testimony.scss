@@ -1,0 +1,95 @@
+@use "./abstracts/colors" as *;
+
+.testimony {
+    padding-left: 10px;
+    padding-right: 10px;
+
+    &__content {
+        padding: 25px;
+        margin-top: 50px;
+        margin-bottom: 60px;
+        margin-left: 20px;
+        color: black;
+    }
+
+    &__desc {
+        font-weight: 300;
+        font-size: 1.5rem;
+        margin-top: -30px;
+        margin-left: 132px;
+        padding-bottom: 40px;
+    }
+
+    &__icon {
+        height: 70px;
+        margin-top: 30px;
+        margin-left: 85px;
+        width: 64px;
+    }
+    &__client {
+        margin-left: 11%;
+
+        &--name {
+            margin-bottom: 2px;
+            font-size: 1.75rem;
+            font-weight: bolder;
+        }
+        &--desc {
+            font-size: 1rem;
+            font-weight: 300;
+            line-height: normal;
+        }
+    }
+    @media screen and (max-width: 767px) {
+        .testimony__content {
+            margin-top: 10%;
+            color: black;
+        }
+        &__desc {
+            font-weight: 300;
+            font-size: 1rem;
+            margin-left: 0px;
+            padding-bottom: 36px;
+        }
+
+        &__icon {
+            height: 70px;
+            margin-top: 30px;
+            margin-left: 5px;
+            width: 64px;
+        }
+
+        &__client {
+            margin-left: 0px;
+
+            &--name {
+                font-size: 1rem;
+                font-weight: 800;
+            }
+
+            &--desc {
+                font-size: 1rem;
+            }
+        }
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        &__content {
+            margin-top: 15%;
+        }
+        &__client--name {
+            font-size: 1.5rem;
+        }
+
+        &__icon {
+            height: 40px;
+            margin-top: 30px;
+            margin-left: 0px;
+            width: 64px;
+        }
+
+        &__desc {
+            margin-left: 70px;
+        }
+    }
+}

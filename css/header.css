@@ -1,0 +1,73 @@
+.navbutton {
+  background-color: #0606E4;
+  height: 50px;
+  position: fixed;
+  z-index: 1;
+  right: 0;
+}
+.navbutton__toggle {
+  cursor: pointer;
+  padding: 15px;
+  float: right;
+  color: #fff;
+  font-size: 20px;
+  position: relative;
+  z-index: 1;
+}
+.navbutton__toggle__bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin-bottom: 4px;
+  transition: transform 0.3s ease;
+}
+.navbutton__menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #0020f6;
+}
+.navbutton__menu.menu {
+  display: block;
+}
+.navbutton__menu.menu ul {
+  list-style-type: none;
+  font-family: "Work Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 0.125rem;
+}
+.navbutton__menu.menu ul li {
+  margin: 10px;
+}
+.navbutton__menu.menu ul li a {
+  color: #fff;
+  margin-left: 40px;
+  text-decoration: none;
+}
+.navbutton__yellow::before {
+  content: "";
+  height: 0.6rem;
+  width: 90px;
+  display: inline-block;
+  margin: 0px 0px 22px -90px;
+  background-color: #e3F307;
+}
+
+.navbutton__toggle.open .navbutton__toggle__bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.navbutton__toggle.open .navbutton__toggle__bar:nth-child(2) {
+  opacity: 0;
+}
+
+.navbutton__toggle.open .navbutton__toggle__bar:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
