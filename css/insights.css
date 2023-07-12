@@ -3,7 +3,7 @@
 }
 .insights__heading {
   color: #fff;
-  font-size: 32px;
+  font-size: 40px;
   padding-top: 3.5rem;
   padding-bottom: 3.5rem;
 }
@@ -36,7 +36,7 @@
 }
 .insights__para {
   color: #fff;
-  margin-bottom: 0.5rem;
+  margin-bottom: 2.5rem;
   padding: 10px;
   font-size: 16px;
 }
